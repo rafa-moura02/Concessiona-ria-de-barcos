@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguelitos Náutica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('mar.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: rgba(238, 238, 234, 0.559); 
+    }
+
+    .menu {
+      position: fixed; 
+      top: 0;
+      width: 100%;
+      background-color: rgba(243, 209, 37, 0.246); 
+      padding: 50px 0; 
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .menu .logo img {
+      position: absolute;
+      left: 100px; 
+      top: 50%;
+      transform: translateY(-50%); 
+      height: 200px; 
+      width: 10;
+      filter: hue-rotate(200deg); 
+      
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0; 
+      padding: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .menu ul li {
+      margin-right: 30px;
+    }
+
+    .menu ul li a {
+      color: rgba(2, 2, 2, 0.738); 
+      text-decoration: none; 
+      font-size: 25px;
+      font-weight: bolder;
+      padding: 8px 16px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .menu ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2); 
+      border-radius: 5px;
+    }
+
+    .section {
+      display: none;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      margin-top: 120px; 
+      text-align: center;
+      font-size: 36px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="menu">
+  <div class="logo">
+    <img src="Miguelitos.png" alt="Miguelitos Náutica"> 
+  </div>
+  
+  <ul>
+    <li><a onclick="showSection('home')">Home</a></li>
+    <li><a onclick="showSection('servicos')">Serviços</a></li>
+    <li><a onclick="showSection('sobre')">Sobre</a></li>
+    <li><a onclick="showSection('contato')">Contato</a></li>
+  </ul>
+</nav>
+
+<div id="home" class="section active">
+  <h1></h1>
+  <p>Toward the horizon</p>
+</div>
+
+<div id="servicos" class="section">
+  <h1>Nossos Serviços</h1>
+  <p>Oferecemos uma variedade de serviços para atender às suas necessidades náuticas.</p>
+</div>
+
+<div id="sobre" class="section">
+  <h1>Sobre Nós</h1>
+  <p>Conheça mais sobre nossa história e nossos valores.</p>
+</div>
+
+<div id="contato" class="section">
+  <h1>Contato</h1>
+  <p>Entre em contato conosco para mais informações.</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
