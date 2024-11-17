@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Miguelitos Náutica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('mar.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .login-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #f3d125;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+
+    input[type="submit"] {
+      background: #f3d125;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #e0c019;
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      color: #f3d125;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="dashboard.html" method="POST">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+      
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+      
+      <input type="submit" value="Entrar">
+    </form>
+    <div class="links">
+      <a href="registro.html">Criar uma conta</a> 
+      <a href="forgot-password.html">Esqueci minha senha</a>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
