@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Vendas</title>
+  <style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        background: url('mar.jpg') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      
+      .container {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 600px;
+      }
+      
+      
+      h1, h2, h3 {
+        text-align: center;
+        color: #f3d125;
+        margin-bottom: 20px;
+      }
+      
+     
+      label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      
+      
+      input, select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+      }
+      
+     
+      input[type="submit"] {
+        background: #f3d125;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        transition: background 0.3s;
+      }
+      
+      input[type="submit"]:hover {
+        background: #e0c019;
+      }
+      
+     
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      
+      table, th, td {
+        border: 1px solid #f3d125;
+      }
+      
+      th, td {
+        padding: 10px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      th {
+        background: #f3d125;
+        color: #000;
+      }
+    
+     
+    button.editar, button.excluir {
+        padding: 3px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      
+      button.editar {
+        background-color: #f3d125; 
+        color: #000; 
+      }
+      
+      button.editar:hover {
+        background-color: #e0c019; 
+        color: #fff; 
+      }
+      
+      
+      button.excluir {
+        background-color: #ff4d4d; 
+        color: #fff; 
+      }
+      
+      button.excluir:hover {
+        background-color: #cc0000; 
+        color: #fff; 
+      }
+      
+      
+      </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Vendas</h1>
+    <form id="vendaForm">
+      <label for="nomeClienteVenda">Nome do Cliente:</label>
+      <input type="text" id="nomeClienteVenda" placeholder="Digite o nome do cliente" required>
+
+      <label for="emailClienteVenda">Email:</label>
+      <input type="email" id="emailClienteVenda" placeholder="Digite o email do cliente" required>
+
+      <label for="modeloVenda">Modelo:</label>
+      <select id="modeloVenda" required>
+        <option value="Schaefer 510 GT">Schaefer 510 GT</option>
+        <option value="Phantom 400">Phantom 400</option>
+        <option value="Schaefer 770">Schaefer 770</option>
+      </select>
+
+      <label for="valorVenda">Valor:</label>
+      <input type="number" id="valorVenda" placeholder="Digite o valor da venda" required>
+
+      <input type="submit" value="Registrar Venda">
+    </form>
+
+    <h3>Vendas Registradas</h3>
+    <table id="tabelaVendas">
+      <thead>
+        <tr>
+          <th>Nome do Cliente</th>
+          <th>Email</th>
+          <th>Modelo</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <a href="index.html">Voltar ao Home</a>
+      </tbody>
+    </table>
+  </div>
+  <script src="registro-vendas.js"></script>
+</body>
+</html>
