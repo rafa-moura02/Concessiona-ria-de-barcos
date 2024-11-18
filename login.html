@@ -20,11 +20,13 @@
 
     .login-container {
       background: rgba(0, 0, 0, 0.7);
-      padding: 20px 30px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 400px;
+      display: grid;
+      gap: 20px;
       text-align: center;
     }
 
@@ -69,6 +71,9 @@
     }
 
     .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
       margin-top: 15px;
     }
 
@@ -82,6 +87,20 @@
       text-decoration: underline;
     }
     
+    @media (max-width: 600px) {
+      .login-container {
+        width: 80%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      input {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
